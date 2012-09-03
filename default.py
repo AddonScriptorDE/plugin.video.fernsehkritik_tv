@@ -10,7 +10,6 @@ import re
 import random
 import xbmcaddon
 import time
-import os
 
 thisPlugin = int(sys.argv[1])
 
