@@ -187,7 +187,7 @@ def getCouchFeed(url):
     passwordMgr.add_password(None, url, settings.getSetting('couchUsername'), settings.getSetting('couchPassword'))
     authHandler   = urllib2.HTTPBasicAuthHandler(passwordMgr)
     opener        = urllib2.build_opener(authHandler)
-    request       = opener.open(url)
+    request       = opener.open(url, timeout=30)
     content       = request.read()
     request.close()
     return content
